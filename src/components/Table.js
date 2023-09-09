@@ -4,7 +4,6 @@ import {
   DataGridPremium,
 } from '@mui/x-data-grid-premium';
 
-
 export default function RowGroupingBasicExample() {
   const { placesMapped} = useContext(app_context)
   const cols = [
@@ -23,7 +22,8 @@ export default function RowGroupingBasicExample() {
 
   return (
     <div style={{height:400,  width: '95%', margin:"auto", marginTop:"40px" }}>
-      <DataGridPremium
+      
+      {placesMapped && placesMapped.length>0?<DataGridPremium
       columns={cols}
       rows={placesMapped}
       rowGroupingModel={["state"]}
@@ -33,7 +33,7 @@ export default function RowGroupingBasicExample() {
       getRowHeight={() => 'auto'}
       rowSpacingType={"margin"}
       getRowSpacing={getRowSpacing}
-         />
+         />:<h1>Loading data...</h1>}
     </div>
   );
 }

@@ -42,6 +42,7 @@ function Index() {
         console.log("No such document!");
       }
     };
+    if(data && Object.keys(data).length > 0) return
     getDocData();
   }, []);
 

@@ -74,11 +74,11 @@ export default function MultipleSelectChip({
       let id = 0;
       if(stateName?.length>0){
         for (let i of stateName) {
-          console.log("state selected", i);
+          // console.log("state selected", i);
           let checkCitySelected = false;
-          console.log("citiesSelected", cityName)
+          // console.log("citiesSelected", cityName)
           for (let j of cityName) {
-            console.log("city", j,data[i]);
+            // console.log("city", j,data[i]);
             let tempObj={}
             if (data[i === "MAHARASHTRA"?i:`${i}:`]?.hasOwnProperty(j)) {
               // selected state contains selected city
@@ -102,7 +102,7 @@ export default function MultipleSelectChip({
                 tempObj.state =(i === "MAHARASHTRA")? i : i.substring(0,i.length-1) // to exclude : at the end of state name
                 places.push(tempObj);
               }
-            }
+          }
         }
       }
       else{

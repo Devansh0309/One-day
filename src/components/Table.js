@@ -23,7 +23,8 @@ export default function RowGroupingBasicExample() {
   return (
     <div style={{height:400,  width: '95%', margin:"auto", marginTop:"40px" }}>
       
-      {placesMapped && placesMapped.length>0?<DataGridPremium
+      {placesMapped && placesMapped.length>0?
+      <DataGridPremium
       columns={cols}
       rows={placesMapped}
       rowGroupingModel={["state"]}
@@ -33,7 +34,8 @@ export default function RowGroupingBasicExample() {
       getRowHeight={() => 'auto'}
       rowSpacingType={"margin"}
       getRowSpacing={getRowSpacing}
-         />:<h1>Loading data...</h1>}
+         />:
+      <h1>Loading data...</h1>}
     </div>
   );
 }

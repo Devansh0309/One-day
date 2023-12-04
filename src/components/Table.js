@@ -12,7 +12,7 @@ export default function RowGroupingBasicExample() {
   
   const cols = [
     {field:"state",
-     headerName: "",
+     headerName: "State",
      minWidth:"0",
      maxWidth: "0"
     }, 

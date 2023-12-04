@@ -12,7 +12,7 @@ function Context({ children }) {
   const [stateName, setStateName] = useState([]);
   const [cityName, setCityName] = useState([]);
   const [placesMapped, setPlacesMapped] = useState([])
-
+ 
 
   return (
     <app_context.Provider value={

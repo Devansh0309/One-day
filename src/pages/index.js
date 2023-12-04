@@ -5,6 +5,7 @@ import Table from "../components/Table";
 import { app_context } from "../../context";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../configs/firebaseConfig";
+import DialogVerticalScroll from "@/components/Modal";
 
 function Index() {
   const {
@@ -130,6 +131,7 @@ function Index() {
       ) : (
         <h3>Loading...</h3>
       )}
+      {/* <DialogVerticalScroll/> */}
       <Table />
     </div>
   );
